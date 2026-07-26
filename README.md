@@ -38,21 +38,32 @@ It works entirely offline. No telemetry, no daemons, no background processes. Ju
 
 ## Preview
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h42m58s_screenshot.png" width="800" alt="0xtools Dashboard">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h43m26s_screenshot.png" width="800" alt="0xtools Tool List">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h43m51s_screenshot.png" width="800" alt="0xtools Search">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h44m33s_screenshot.png" width="800" alt="0xtools Tool Detail">
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <b>Dashboard</b><br/>
+      <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/categories-sc.png" width="400" alt="Dashboard"><br/>
+      <sub>Browse tools by security category</sub>
+    </td>
+    <td align="center">
+      <b>Tool List</b><br/>
+      <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/list-tools.png" width="400" alt="Tool List"><br/>
+      <sub>View tools with descriptions and status</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>CLI Help</b><br/>
+      <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/cli-help.png" width="400" alt="CLI Help"><br/>
+      <sub>Quick access via command line</sub>
+    </td>
+    <td align="center">
+      <b>Keyboard Shortcuts</b><br/>
+      <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/help-sc.png" width="400" alt="Help"><br/>
+      <sub>Vim-style keyboard navigation</sub>
+    </td>
+  </tr>
+</table>
 
 <br>
 
