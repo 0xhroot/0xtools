@@ -16,13 +16,9 @@ Discover · Understand · Install · Organize
 
 <br>
 
-```
-    ╔═══════════════════════════════════╗
-    ║     ┌─┐ 0xtools                  ║
-    ║     │▒│ security tools browser    ║
-    ║     └─┘─────────────────── ▒ ▒ ▒  ║
-    ╚═══════════════════════════════════╝
-```
+<p align="center">
+  <img src="demo.gif" alt="0xtools demo" width="700">
+</p>
 
 <br>
 
