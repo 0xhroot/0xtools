@@ -1,0 +1,31 @@
+# Maintainer: 0xtools contributors
+pkgname=0xtools
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Interactive cybersecurity tool browser for Arch Linux with BlackArch support'
+arch=('x86_64')
+url='https://github.com/0xhroot/0xtools'
+license=('MIT' 'Apache-2.0')
+depends=('alpm' 'pacman' 'gcc-libs')
+makedepends=('cargo')
+provides=('0xtools')
+conflicts=('0xtools-bin')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/0xhroot/0xtools/archive/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+    cd "$pkgname-$pkgver"
+    cargo build --release --locked
+}
+
+check() {
+    cd "$pkgname-$pkgver"
+    cargo test --locked
+}
+
+package() {
+    cd "$pkgname-$pkgver"
+    install -Dm755 "target/release/0xtools" "$pkgdir/usr/bin/0xtools"
+    install -Dm644 LICENSE-MIT "$pkgdir/usr/share/licenses/$pkgname/LICENSE-MIT"
+    install -Dm644 LICENSE-APACHE "$pkgdir/usr/share/licenses/$pkgname/LICENSE-APACHE"
+}

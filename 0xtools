@@ -1,0 +1,47 @@
+#!/bin/sh
+# 0xtools launcher script
+# Detects the project directory, builds if needed, and runs the binary.
+
+set -e
+
+# Determine the directory this script lives in.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BINARY="$SCRIPT_DIR/target/release/0xtools"
+DEBUG_BINARY="$SCRIPT_DIR/target/debug/0xtools"
+
+# If a release binary exists, run it directly.
+if [ -x "$BINARY" ]; then
+    exec "$BINARY" "$@"
+fi
+
+# If a debug binary exists, run it directly.
+if [ -x "$DEBUG_BINARY" ]; then
+    exec "$DEBUG_BINARY" "$@"
+fi
+
+# Check for cargo.
+if command -v cargo >/dev/null 2>&1; then
+    echo "Building 0xtools (release mode)..."
+    cargo build --release --manifest-path="$SCRIPT_DIR/Cargo.toml"
+    if [ -x "$BINARY" ]; then
+        exec "$BINARY" "$@"
+    fi
+    echo "Build succeeded but binary not found at $BINARY"
+    exit 1
+fi
+
+# No cargo found.
+cat >&2 << 'EOF'
+Error: 0xtools binary not found and Cargo is not installed.
+
+To build from source, install Rust and Cargo:
+  https://www.rust-lang.org/tools/install
+
+Then run:
+  cargo build --release
+  ./target/release/0xtools
+
+Or download a pre-built release binary from:
+  https://github.com/0xhroot/0xtools/releases
+EOF
+exit 1

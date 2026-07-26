@@ -1,0 +1,11 @@
+/target/
+*.swp
+*.swo
+*~
+.cache/
+config.toml
+logs/
+*.log
+.env
+.vscode/
+.idea/
