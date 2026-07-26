@@ -109,21 +109,46 @@ $ 0xtools search "wireless deauth"
 
 ## Installation
 
+### Prebuilt binary (recommended)
+
+Download the latest Linux x86_64 binary from [GitHub Releases](https://github.com/0xhroot/0xtools/releases).
+
+```sh
+chmod +x 0xtools-linux-x86_64
+sudo install -Dm755 0xtools-linux-x86_64 /usr/local/bin/0xtools
+```
+
+We use `/usr/local/bin` for manually installed binaries — `/usr/bin` is package-manager-owned on Arch.
+
+Verify the checksum:
+
+```sh
+sha256sum -c 0xtools-linux-x86_64.sha256
+```
+
+Then run:
+
+```sh
+0xtools
+```
+
+**Runtime requires:** `libalpm` (provided by `pacman` — present on every Arch system).
+
+### Uninstall
+
+```sh
+sudo rm /usr/local/bin/0xtools
+```
+
+### Build from source
+
 ```sh
 git clone https://github.com/0xhroot/0xtools.git
 cd 0xtools
-./0xtools              # builds release binary on first run, then launches
+./0xtools
 ```
 
-The `./0xtools` launcher script checks for a prebuilt binary. If none exists and Cargo is available, it builds a release binary automatically. Subsequent launches use the cached binary.
-
-### Requirements
-
-| Requirement | Notes |
-|---|---|
-| **Arch Linux** | x86_64, pacman-based |
-| **Rust / Cargo** | For building from source |
-| **BlackArch repo** | Optional — enhances catalog |
+The root `./0xtools` launcher builds the optimized Rust binary when needed and launches it. Requires Rust/Cargo.
 
 <br>
 
@@ -373,7 +398,7 @@ src/
 - [x] Favorites and curated profiles
 - [x] Package install / remove with transaction previews
 - [x] System health checks (`doctor`)
-- [ ] Precompiled GitHub releases
+- [x] Precompiled GitHub releases
 - [ ] AUR package (`0xtools-bin`)
 - [ ] Curated tool references (CLI examples, flags)
 - [ ] Custom profiles from TOML files

@@ -1,4 +1,5 @@
 /target/
+/dist/
 *.swp
 *.swo
 *~
@@ -9,3 +10,5 @@ logs/
 .env
 .vscode/
 .idea/
+demo.cast
+demo.mp4
