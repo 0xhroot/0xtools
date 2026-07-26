@@ -38,35 +38,21 @@ It works entirely offline. No telemetry, no daemons, no background processes. Ju
 
 ## Preview
 
-```
-╭────────────────────────────────────────────────────────────────╮
-│  0xtools                                          Dashboard   │
-├────────────────────────────────────────────────────────────────┤
-│                                                                │
-│  ● Reconnaissance                  1089 tools                 │
-│    OSINT                            106 tools                 │
-│    Web Security                     477 tools                 │
-│    Network Security                 274 tools                 │
-│    Wireless                         103 tools                 │
-│    Reverse Engineering              342 tools                 │
-│    Exploit Development              395 tools                 │
-│    Malware Analysis                 115 tools                 │
-│    Cloud Security                   150 tools                 │
-│    Cryptography                     119 tools                 │
-│    ...                                                        │
-│                                                                │
-│  35 categories │ dynamically indexed │ offline capable        │
-╰────────────────────────────────────────────────────────────────╯
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h42m58s_screenshot.png" width="800" alt="0xtools Dashboard">
+</p>
 
-Each tool has a description — never a bare package name:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h43m26s_screenshot.png" width="800" alt="0xtools Tool List">
+</p>
 
-```
-  ● ffuf             Fast web fuzzer written in Go.              [BlackArch]
-  ● nuclei           Fast and customizable vulnerability scan…   [BlackArch]
-  ● sqlmap           Automatic SQL injection and database tak…   [BlackArch]
-  ● masscan          TCP port scanner, transmits 10M packets/…   [Extra]
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h43m51s_screenshot.png" width="800" alt="0xtools Search">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/0xhroot/0xtools/main/sc/260726_12h44m33s_screenshot.png" width="800" alt="0xtools Tool Detail">
+</p>
 
 <br>
 
